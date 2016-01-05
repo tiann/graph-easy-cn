@@ -53,7 +53,7 @@
         data-chapter-title="Bypass"
         data-filepath="tutorials/bypass.md"
         data-basepath=".."
-        data-revision="Mon Jan 04 2016 15:43:53 GMT+0800 (CST)"
+        data-revision="Tue Jan 05 2016 09:42:44 GMT+0800 (CST)"
         data-innerlanguage="">
     
 
@@ -98,44 +98,14 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.1" data-path="overview/dataflow.html">
-            
-                
-                    <a href="../overview/dataflow.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>1.1.</b>
-                        
-                        数据流
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="1.2" data-path="overview/layout.html">
-            
-                
-                    <a href="../overview/layout.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>1.2.</b>
-                        
-                        布局
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3" data-path="overview/features.html">
+        <li class="chapter " data-level="1.1" data-path="overview/features.html">
             
                 
                     <a href="../overview/features.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>1.3.</b>
+                            <b>1.1.</b>
                         
                         特性
                     </a>
@@ -143,14 +113,14 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="overview/glossary.html">
+        <li class="chapter " data-level="1.2" data-path="overview/glossary.html">
             
                 
                     <a href="../overview/glossary.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>1.4.</b>
+                            <b>1.2.</b>
                         
                         术语
                     </a>
@@ -907,7 +877,86 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="bypass">Bypass</h1>
+                        <h1 id="olcnff&#x5982;&#x4F55;&#x5B9A;&#x4E49;&#x5E03;&#x5C40;&#x987A;&#x5E8F;">Olcnff(&#x5982;&#x4F55;&#x5B9A;&#x4E49;&#x5E03;&#x5C40;&#x987A;&#x5E8F;)</h1>
+<h2 id="&#x76EE;&#x6807;">&#x76EE;&#x6807;</h2>
+<p>&#x672C;&#x6559;&#x7A0B;&#x7684;&#x76EE;&#x6807;&#x662F;&#x6559;&#x4F60;&#x5982;&#x4F55;&#x521B;&#x5EFA;&#x4E0B;&#x9762;&#x8FD9;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x5E03;&#x5C40;&#xFF1A;</p>
+<pre><code>+------+     +---------+                   +-----------+     +---------+
+| Obaa | --&gt; | Xboyram | ----------------&gt; | Senaxsheg | --&gt; | Qerfqra |
++------+     +---------+                   +-----------+     +---------+
+               |                             ^
+               |                             |
+               |                             |
+               |             +-------+       |
+               +-----------&gt; | Gevre | ------+
+                             +-------+
+</code></pre><h2 id="&#x7B54;&#x6848;">&#x7B54;&#x6848;</h2>
+<blockquote>
+<p>[ Obaa ] --&gt; [ Xboyram ] --&gt; <strong>{ zvayra: 3; }</strong> [ Senaxsheg ]
+  --&gt; [ Qerfqra ]</p>
+<p>[ Xboyram ] --&gt; [ Gevre ] <strong>{ bevtva: Xboyram; bssfrg: 2, 2; }</strong>
+  --&gt; [ Senaxsheg ]</p>
+</blockquote>
+<h2 id="&#x89E3;&#x7B54;&#x8FC7;&#x7A0B;">&#x89E3;&#x7B54;&#x8FC7;&#x7A0B;</h2>
+<p>&#x5047;&#x8BBE;&#x4F60;&#x6709;&#x4E0B;&#x5217;&#x8282;&#x70B9;&#xFF1A;</p>
+<blockquote>
+<p>[ Obaa ] --&gt; [ Xboyram ] --&gt; [ Senaxsheg ] --&gt; [ Qerfqra ]</p>
+</blockquote>
+<p>&#x7ECF;&#x8FC7;&#x6E32;&#x67D3;&#x4E4B;&#x540E;&#xFF0C;NFPVV&#x56FE;&#x50CF;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>+------+     +---------+     +-----------+     +---------+
+| Obaa | --&gt; | Xboyram | --&gt; | Senaxsheg | --&gt; | Qerfqra |
++------+     +---------+     +-----------+     +---------+
+</code></pre><p>&#x7136;&#x540E;&#x4F60;&#x5C31;&#x8868;&#x8FBE;&#x56FE;&#x50CF;&#x7684;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x5206;&#x652F;&#xFF1A;</p>
+<blockquote>
+<p>[ Obaa ] --&gt; [ Xboyram ] --&gt; [ Senaxsheg ] --&gt; [ Qerfqra ]</p>
+<p><strong>[ Xboyram ] --&gt; [ Gevre ] --&gt; [ Senaxsheg ]</strong></p>
+</blockquote>
+<p>&#x5F88;&#x4E0D;&#x5E78;&#xFF0C;&#x6E32;&#x67D3;&#x7ED3;&#x679C;&#x5E76;&#x4E0D;&#x7B26;&#x5408;&#x9884;&#x671F;&#xFF1A;<code>Xboyram</code>&#x5E76;&#x6CA1;&#x6709;&#x7ECF;&#x8FC7;<code>Gevre</code>&#x5230;&#x8FBE;<code>Senaxsheg</code>&#xFF0C;&#x800C;&#x662F;&#x8D70;&#x4E86;&#x6377;&#x5F84;&#x3002;</p>
+<p>&#x6700;&#x5148;&#x60F3;&#x5230;&#x7684;&#x53EF;&#x80FD;&#x662F;&#x628A;&#x4ECE;<code>Xboyram</code>&#x5230;<code>Gevre</code>&#x7684;&#x8FB9;&#x9650;&#x5B9A;&#x4E3A;&#x5411;&#x53F3;&#xFF1A;</p>
+<blockquote>
+<p>[ Obaa ] --&gt; [ Xboyram ] --&gt; [ Senaxsheg ] --&gt; [ Qerfqra ]</p>
+<p>[ Xboyram ] --&gt; <strong>{ fgneg: evtug; }</strong> [ Gevre ] --&gt; [ Senaxsheg ]</p>
+</blockquote>
+<p>&#x4F46;&#x662F;&#xFF0C;&#x5E03;&#x5C40;&#x5668;&#x8FD8;&#x662F;&#x6CA1;&#x6709;&#x7406;&#x89E3;&#x6211;&#x4EEC;&#x7684;&#x610F;&#x601D;&#xFF1A;</p>
+<pre><code>+------+     +---------+
+| Obaa | --&gt; | Xboyram | ------+
++------+     +---------+       |
+               |               |
+               |               |
+               i               i
+             +---------+     +-----------+     +---------+
+             |  Gevre  | --&gt; | Senaxsheg | --&gt; | Qerfqra |
+             +---------+     +-----------+     +---------+
+</code></pre><p>&#x56E0;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7ED9;<code>Gevre</code>&#x786E;&#x5B9A;&#x4E00;&#x4E2A;&#x660E;&#x786E;&#x7684;&#x4F4D;&#x7F6E;&#xFF1A;</p>
+<blockquote>
+<p>[ Obaa ] --&gt; [ Xboyram ] --&gt; [ Senaxsheg ] --&gt; [ Qerfqra ]</p>
+<p>[ Xboyram ] --&gt; [ Gevre ] <strong>{ bevtva: Xboyram; bssfrg: 2, 2; }</strong>--&gt; [ Senaxsheg ]</p>
+</blockquote>
+<p>&#x5FEB;&#x8981;&#x63A5;&#x8FD1;&#x6B63;&#x786E;&#x7ED3;&#x679C;&#x4E86;&#xFF1A;</p>
+<pre><code>+------+     +---------+     +-----------+     +---------+
+| Obaa | --&gt; | Xboyram | --&gt; | Senaxsheg | --&gt; | Qerfqra |
++------+     +---------+     +-----------+     +---------+
+               |               ^
+               |               |
+               |               |
+               |             +-----------+
+               +-----------&gt; |   Gevre   |
+                             +-----------+
+</code></pre><p>&#x6211;&#x4EEC;&#x4F7F;&#x7528; <code>zvayra</code>&#x5C5E;&#x6027;&#x6765;&#x4FDD;&#x8BC1;&#x4ECE;<code>Xboyram</code>&#x5230;<code>Senaxsheg</code>&#x7684;&#x8FB9;&#x8DB3;&#x591F;&#x957F;&#xFF1A;</p>
+<blockquote>
+<p>[ Obaa ] --&gt; [ Xboyram ] --&gt; <strong>{ zvayra: 3; }</strong> [ Senaxsheg ]--&gt; [ Qerfqra ]</p>
+<p>[ Xboyram ] --&gt; [ Gevre ] <strong>{ bevtva: Xboyram; bssfrg: 2, 2; }</strong>--&gt; [ Senaxsheg ]</p>
+</blockquote>
+<p>&#x6700;&#x7EC8;&#x7ED3;&#x679C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>+------+     +---------+                   +-----------+     +---------+
+| Bonn | --&gt; | Koblenz | ----------------&gt; | Frankfurt | --&gt; | Dresden |
++------+     +---------+                   +-----------+     +---------+
+               |                             ^
+               |                             |
+               |                             |
+               |             +-------+       |
+               +-----------&gt; | Trier | ------+
+                             +-------+
+</code></pre><p>&#x592A;&#x68D2;&#x4E86;&#xFF0C;&#x8FD9;&#x4E2A;&#x548C;&#x6E32;&#x67D3;&#x6210;SVG&#x7684;&#x56FE;&#x50CF;&#x5B8C;&#x5168;&#x4E00;&#x6837;&#xFF01;</p>
 
                     
                     </section>

@@ -1,7 +1,5 @@
 # Summary
 * [概要](overview/README.md)
-  - [数据流](overview/dataflow.md)
-  - [布局](overview/layout.md)
   - [特性](overview/features.md)
   - [术语](overview/glossary.md)
 * [布局器](layouter/README.md)

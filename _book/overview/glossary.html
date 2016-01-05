@@ -49,11 +49,11 @@
         
         
     <div class="book"
-        data-level="1.4"
+        data-level="1.2"
         data-chapter-title="术语"
         data-filepath="overview/glossary.md"
         data-basepath=".."
-        data-revision="Mon Jan 04 2016 15:43:53 GMT+0800 (CST)"
+        data-revision="Tue Jan 05 2016 09:42:44 GMT+0800 (CST)"
         data-innerlanguage="">
     
 
@@ -98,44 +98,14 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.1" data-path="overview/dataflow.html">
-            
-                
-                    <a href="../overview/dataflow.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>1.1.</b>
-                        
-                        数据流
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="1.2" data-path="overview/layout.html">
-            
-                
-                    <a href="../overview/layout.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>1.2.</b>
-                        
-                        布局
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3" data-path="overview/features.html">
+        <li class="chapter " data-level="1.1" data-path="overview/features.html">
             
                 
                     <a href="../overview/features.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>1.3.</b>
+                            <b>1.1.</b>
                         
                         特性
                     </a>
@@ -143,14 +113,14 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4" data-path="overview/glossary.html">
+        <li class="chapter active" data-level="1.2" data-path="overview/glossary.html">
             
                 
                     <a href="../overview/glossary.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>1.4.</b>
+                            <b>1.2.</b>
                         
                         术语
                     </a>
@@ -908,6 +878,23 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="&#x672F;&#x8BED;">&#x672F;&#x8BED;</h1>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x5728;&#x8FD9;&#x4E2A;&#x624B;&#x518C;&#x4E2D;&#x7528;&#x5230;&#x7684;&#x4E00;&#x4E9B;&#x672F;&#x8BED;&#xFF1A;</p>
+<ul>
+<li>node - &#x4EE3;&#x8868;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x6216;&#x8005;&#x4E00;&#x4E2A;&#x56FE;&#x7684;&#x9876;&#x70B9;</li>
+<li>edge - &#x8FDE;&#x63A5;&#x4E24;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x8FB9;&#xFF08;&#x6216;&#x8005;&#x662F;&#x8FDE;&#x63A5;&#x8282;&#x70B9;&#x81EA;&#x5DF1;&#xFF09;&#x6BD4;&#x5982;&#xFF1A;[ Bonn ] -&gt; [ Berlin ]</li>
+<li>group - &#x5B50;&#x56FE;</li>
+<li>name - &#x4E00;&#x4E2A;&#x8282;&#x70B9;&#xFF0C;&#x5B50;&#x56FE;&#x552F;&#x4E00;&#x7684;&#x540D;&#x5B57;&#xFF1B;&#x8FB9;&#x548C;&#x56FE;&#x6CA1;&#x6709;&#x540D;&#x5B57;&#x3002;</li>
+<li>label - &#x8282;&#x70B9;&#xFF0C;&#x5B50;&#x56FE;&#x6216;&#x8005;&#x8FB9;&#x4E0A;&#x9762;&#x5C55;&#x793A;&#x6587;&#x672C;&#xFF1B;&#x5BF9;&#x4E8E;&#x8282;&#x70B9;&#x6765;&#x8BF4;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x8BBE;&#x7F6E;&#x6807;&#x7B7E;&#xFF0C;&#x90A3;&#x4E48;&#x4F1A;&#x4F7F;&#x7528;&#x8282;&#x70B9;&#x7684;&#x540D;&#x5B57;&#x3002;</li>
+<li>title - &#x5F53;&#x4F60;&#x5728;&#x8282;&#x70B9;&#x6216;&#x8005;&#x8FB9;&#x4E0A;&#x79FB;&#x52A8;&#x9F20;&#x6807;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C55;&#x793A;&#x7684;&#x6587;&#x672C;&#x3002;</li>
+<li>port - &#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x4E0A;&#x53EF;&#x4EE5;&#x6709;&#x8FB9;&#x7684;&#x8D77;&#x70B9;&#x548C;&#x7EC8;&#x70B9;&#x7684;&#x70B9;&#x3002;</li>
+<li>cell - &#x5E03;&#x5C40;&#x9762;&#x677F;&#x4E0A;&#x7684;&#x5355;&#x5143;&#xFF08;&#x770B;&#x8D77;&#x6765;&#x50CF;&#x662F;checker-board)</li>
+<li>path - &#x8FDE;&#x63A5;&#x4E24;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x8DEF;&#x5F84;</li>
+<li>(edges) pieces - &#x6BCF;&#x4E00;&#x4E2A;path&#x53EF;&#x4EE5;&#x7531;&#x4E00;&#x4E2A;&#x6216;&#x8005;&#x591A;&#x4E2A;cell&#x7EC4;&#x6210;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;cell&#x5305;&#x542B;edges&#x7684;&#x4E00;&#x90E8;&#x5206;&#x3002;</li>
+<li>Parser - &#x628A;&#x6587;&#x672C;&#x63CF;&#x8FF0;&#x89E3;&#x6790;&#x6210;&#x5185;&#x90E8;&#x8868;&#x793A;&#x7684;&#x89E3;&#x6790;&#x5668;</li>
+<li>Layouter - &#x7ED9;&#x4E00;&#x4E2A;&#x56FE;&#x7684;&#x8FB9;&#x548C;&#x8282;&#x70B9;&#x5E03;&#x5C40;&#x7684;&#x4E1C;&#x4E1C;</li>
+<li>hinting - &#x7ED9;Layouter&#x6307;&#x793A;&#x5982;&#x4F55;&#x8FDB;&#x884C;&#x7279;&#x5B9A;&#x5E03;&#x5C40;&#x7684;&#x63D0;&#x793A;</li>
+<li>A* - &#x4E00;&#x4E2A;&#x901A;&#x7528;&#x7684;&#x8DEF;&#x5F84;&#x5BFB;&#x627E;&#x7B97;&#x6CD5;</li>
+</ul>
 
                     
                     </section>
