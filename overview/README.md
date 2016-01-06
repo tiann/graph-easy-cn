@@ -65,13 +65,19 @@ Graph::Easy的确使用了[Graph][1]模块来存储和管理内部的图形数�
 
 上面提到过，Graph::Easy仅仅存储了图像的描述信息，要产生特定的布局，需要借助其他的工具；以下是在Perl里面可以通过Graph产生布局的一些方法：
 
-- [Graph::Easy][3]
-- [dot][4](使用graphviz)
-- [Graph-Layderer][5]
-- [Graph-Layout-Aesthetic][6]
+- Graph::Easy1
+- [dot][3](使用graphviz)
+- [Graph-Layderer][4]
+- [Graph-Layout-Aesthetic][5]
 
 将来或许会有更多，但是作者开始写这个模块的时候，只有这些选择。和其他的方式不同`Graph::Easy`使用了一种checker-board tiled布局。
 
 要指出的是，传统的把节点放置在任意位置的方式不能产生ASCII格式的输出，也不能产生HTML的输出；好吧，或许是有可能，但是如果边不是直的而是到处都是的话，那么非常难办。
 
 以上也是这个项目存在的原因。:-P
+
+[1]: http://search.cpan.org/~jhi/Graph/
+[2]: http://bloodgate.com/perl/graph/manual/benchmark.html
+[3]: http://www.graphviz.org/
+[4]: http://search.cpan.org/~pasky/Graph-Layderer/
+[5]: http://search.cpan.org/~thospel/Graph-Layout-Aesthetic/
