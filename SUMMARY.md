@@ -4,7 +4,7 @@
   - [术语](overview/glossary.md)
 * [布局器](layouter/README.md)
   - [A星算法](layouter/a-start.md)
-* [提示](hinting/README.md)
+* [布局指示](hinting/README.md)
   - [方向](hinting/flow.md)
   - [端口](hinting/ports.md)
   - [Joints](hinting/joints.md)
