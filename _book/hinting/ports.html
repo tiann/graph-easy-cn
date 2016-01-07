@@ -53,7 +53,7 @@
         data-chapter-title="端口"
         data-filepath="hinting/ports.md"
         data-basepath=".."
-        data-revision="Thu Jan 07 2016 19:38:41 GMT+0800 (CST)"
+        data-revision="Thu Jan 07 2016 20:20:23 GMT+0800 (CST)"
         data-innerlanguage="">
     
 
@@ -788,7 +788,122 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="&#x7AEF;&#x53E3;">&#x7AEF;&#x53E3;</h1>
+<h2 id="&#x8FB9;&#x7684;&#x8D77;&#x70B9;&#x548C;&#x7EC8;&#x70B9;">&#x8FB9;&#x7684;&#x8D77;&#x70B9;&#x548C;&#x7EC8;&#x70B9;</h2>
+<p>&#x5728;&#x6211;&#x4EEC;&#x7EE7;&#x7EED;&#x8BA8;&#x8BBA;&#x5E03;&#x5C40;&#x7684;&#x76F8;&#x5BF9;&#x65B9;&#x5411;&#x548C;&#x7EDD;&#x5BF9;&#x65B9;&#x5411;&#x4E4B;&#x524D;&#xFF0C;&#x6211;&#x4EEC;&#x5148;&#x6765;&#x770B;&#x4E00;&#x770B;&#x8282;&#x70B9;&#x7684;&#x7AEF;&#x53E3;&#x6570;&#x76EE;&#x548C;&#x8FB9;&#x7684;&#x6761;&#x6570;&#xFF1B;</p>
+<pre><code>..................................................
+:      :       :       :       :     :     :     :
+: 0,0  :north,0:north,1: 3,0   : 4,0 : 5,0 : 6,0 :
+:      :left,0 :left,1 :       :     :     :     :
+:      :       :       :       :     :     :     :
+..................................................
+:      :+-------------+:       :     :     :     :
+:west,0:|             |:east,0 : 4,1 : 5,1 : 6,1 :
+:back,1:|             |:front,0:     :     :     :
+:      :|             |:       :     :     :     :
+........|    Node     |...........................
+:      :|             |:       :     :     :     :
+:west,1:|             |:east,1 : 4,2 : 5,2 : 6,2 :
+:back,1:|             |:front,1:     :     :     :
+:      :+-------------+:       :     :     :     :
+.................................................
+:      :       :       :       :     :     :     :
+: 0,3  :south,0:south,1: 3,3   : 4,3 : 5,3 : 6,3 :
+:      :right,0:right,1:       :     :     :     :
+:      :       :       :       :     :     :     :
+.................................................
+</code></pre><p>&#x53EF;&#x4EE5;&#x7ED9;&#x8282;&#x70B9;&#x7684;&#x6BCF;&#x4E00;&#x6761;&#x90FD;&#x547D;&#x540D;&#xFF0C;&#x4E4B;&#x6240;&#x4EE5;&#x6BCF;&#x4E00;&#x4E2A;&#x8FB9;&#x90FD;&#x6709;&#x4E24;&#x4E2A;&#x540D;&#x5B57;&#xFF08;&#x6BD4;&#x5982;&#x5317;&#x548C;&#x5DE6;&#xFF09;&#x548C;&#x6574;&#x4E2A;&#x56FE;&#x6216;&#x8005;&#x5206;&#x7EC4;&#x6709;&#x5173;&#xFF1B;&#x4F7F;&#x7528;&#x7EDD;&#x5BF9;&#x65B9;&#x5411;&#x7684;&#x8BDD;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x8FB9;&#x7684;&#x65B9;&#x5411;&#x5C31;&#x4E0E;&#x8282;&#x70B9;&#x7684;&#x65B9;&#x5411;&#x65E0;&#x5173;&#xFF1B;&#x6BD4;&#x5982;&#x5357;&#x65B9;&#x6C38;&#x8FDC;&#x662F;&#x5357;&#x65B9;&#xFF1B;&#x4F46;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x4F7F;&#x7528;&#x76F8;&#x5BF9;&#x65B9;&#x5411;&#x7684;&#x8BDD;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x662F;&#x76F8;&#x5BF9;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x7684;&#x524D;&#x65B9;&#xFF1B;&#x6BD4;&#x5982;&#x53F3;&#x8FB9;&#x6307;&#x7684;&#x662F;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x524D;&#x65B9;&#x7136;&#x540E;&#x5411;&#x53F3;&#xFF1B;&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x5177;&#x4F53;&#x7684;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code>[ C ] -&gt; { start: south; } [ S ] { origin: C; offset: 0,2; }
+[ C ] -&gt; { start: north; } [ N ] { origin: C; offset: 0,-2; }
+[ C ] -&gt; { start: east; }  [ E ] { origin: C; offset: 2,0; }
+[ C ] -&gt; { start: west; }  [ W ] { origin: C; offset: -2,0; }
+</code></pre><pre><code>          +---+
+          | N |
+          +---+
+            ^
+            |
+            |
++---+     +---+     +---+
+| W | &lt;-- | C | --&gt; | E |
++---+     +---+     +---+
+            |
+            |
+            v
+          +---+
+          | S |
+          +---+
+</code></pre><pre><code>[ C ] -&gt; { start: right; } [ R ] { origin: C; offset: 0,2; }
+[ C ] -&gt; { start: left; }  [ L ] { origin: C; offset: 0,-2; }
+[ C ] -&gt; { start: front; } [ F ] { origin: C; offset: 2,0; }
+[ C ] -&gt; { start: back; }  [ B ] { origin: C; offset: -2,0; }
+</code></pre><pre><code>          +---+
+          | L |
+          +---+
+            ^
+            |
+            |
++---+     +---+     +---+
+| B | &lt;-- | C | --&gt; | F |
++---+     +---+     +---+
+            |
+            |
+            v
+          +---+
+          | R |
+          +---+
+</code></pre><p>&#x4E0A;&#x9762;&#x7684;&#x4E24;&#x4E2A;&#x56FE;&#x770B;&#x8D77;&#x6765;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x597D;&#x50CF;&#x4F7F;&#x7528;&#x5411;&#x53F3;&#x548C;&#x5411;&#x5357;&#x5E76;&#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x533A;&#x522B;&#xFF0C;&#x4F46;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x6539;&#x53D8;&#x6574;&#x4E2A;&#x56FE;&#x7684;&#x65B9;&#x5411;&#xFF0C;&#x5C31;&#x4F1A;&#x6709;&#x4E00;&#x4E9B;&#x533A;&#x522B;&#x4E86;&#xFF1A;</p>
+<pre><code>graph { flow: down; }
 
+[ C ] -&gt; { start: south; } [ S ] { origin: C; offset: 0,2; }
+[ C ] -&gt; { start: north; } [ N ] { origin: C; offset: 0,-2; }
+[ C ] -&gt; { start: east; }  [ E ] { origin: C; offset: 2,0; }
+[ C ] -&gt; { start: west; }  [ W ] { origin: C; offset: -2,0; }
+</code></pre><pre><code>          +---+
+          | N |
+          +---+
+            ^
+            |
+            |
++---+     +---+     +---+
+| W | &lt;-- | C | --&gt; | E |
++---+     +---+     +---+
+            |
+            |
+            v
+          +---+
+          | S |
+          +---+
+</code></pre><pre><code>graph { flow: down; }
+
+[ C ] -&gt; { start: right; } [ R ] { origin: C; offset: 0,2; }
+[ C ] -&gt; { start: left; }  [ L ] { origin: C; offset: 0,-2; }
+[ C ] -&gt; { start: front; } [ F ] { origin: C; offset: 2,0; }
+[ C ] -&gt; { start: back; }  [ B ] { origin: C; offset: -2,0; }
+</code></pre><pre><code>          +---+
+          | L | &lt;+
+          +---+  |
+                 |
+  +---------+    |
+  v         |    |
++---+     +---+  |  +---+
+| B |  +- | C | -+  | F |
++---+  |  +---+     +---+
+       |    |         ^
+       |    +---------+
+       |
+       |  +---+
+       +&gt; | R |
+          +---+
+</code></pre><p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;&#x56FE;&#x6839;&#x672C;&#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x53D8;&#x5316;&#xFF1B;&#x4F46;&#x662F;&#x7B2C;&#x4E8C;&#x4E2A;&#x56FE;&#x5C31;&#x5B8C;&#x5168;&#x4E0D;&#x4E00;&#x6837;&#x4E86;&#xFF0C;&#x7531;&#x4E8E;&#x8282;&#x70B9;&#x7684;&#x504F;&#x79FB;&#x662F;&#x56FA;&#x5B9A;&#x7684;&#xFF08;&#x4E0D;&#x4F1A;&#x968F;&#x7740;&#x6574;&#x4E2A;&#x56FE;&#x7684;&#x65B9;&#x5411;&#x53D8;&#x5316;&#x800C;&#x53D8;&#x5316;&#xFF09;&#xFF0C;&#x56E0;&#x6B64;&#x6240;&#x6709;&#x7684;&#x8282;&#x70B9;&#x7684;&#x4F4D;&#x7F6E;&#x4E0D;&#x4F1A;&#x53D1;&#x751F;&#x6539;&#x53D8;&#xFF0C;&#x4F46;&#x662F;&#xFF0C;&#x4ECE;&#x8282;&#x70B9;&#x53D1;&#x51FA;&#x7684;&#x8FB9;&#x7684;&#x65B9;&#x5411;&#x53D1;&#x751F;&#x4E86;&#x53D8;&#x5316;&#x3002;</p>
+<p>&#x603B;&#x7ED3;&#xFF1A;&#x5982;&#x679C;&#x5E0C;&#x671B;&#x56FE;&#x4E0E;&#x65B9;&#x5411;&#x65E0;&#x5173;&#xFF0C;&#x6700;&#x55E8;&#x4F7F;&#x7528;&#x7EDD;&#x5BF9;&#x7684;&#x65B9;&#x5411;&#xFF0C;&#x6BD4;&#x5982;&#x4E1C;&#x5357;&#x897F;&#x5317;&#xFF1B;&#x5982;&#x679C;&#x5E0C;&#x671B;&#x56FE;&#x53EF;&#x4EE5;&#x65CB;&#x8F6C;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x4F7F;&#x7528;&#x76F8;&#x5BF9;&#x65B9;&#x5411;&#x3002;</p>
+<h2 id="&#x7AEF;&#x53E3;&#x6570;&#x76EE;">&#x7AEF;&#x53E3;&#x6570;&#x76EE;</h2>
+<p>&#x901A;&#x8FC7;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x8FB9;&#x7684;&#x8D77;&#x70B9;&#x548C;&#x7EC8;&#x70B9;&#xFF0C;&#x53EF;&#x4EE5;&#x6307;&#x5BFC;&#x5E03;&#x5C40;&#x5668;&#x628A;&#x8FB9;&#x653E;&#x7F6E;&#x5728;&#x90A3;&#x4E2A;&#x7AEF;&#x53E3;&#x4E0A;&#x3002;</p>
+<pre><code>[ Left ] -&gt; { start: left; end: left; } [ Right ]
+</code></pre><pre><code>  +------------+
+  |            v
++------+     +-------+
+| Left |     | Right |
++------+     +-------+
+</code></pre>
                     
                     </section>
                 
