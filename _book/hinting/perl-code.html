@@ -53,7 +53,7 @@
         data-chapter-title="Perl代码"
         data-filepath="hinting/perl-code.md"
         data-basepath=".."
-        data-revision="Tue Jan 12 2016 10:39:32 GMT+0800 (CST)"
+        data-revision="Tue Jan 12 2016 11:58:15 GMT+0800 (CST)"
         data-innerlanguage="">
     
 
@@ -788,7 +788,29 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="perl&#x4EE3;&#x7801;">Perl&#x4EE3;&#x7801;</h1>
+<p>&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x5C55;&#x793A;&#x4E86;&#x5982;&#x4F55;&#x4F7F;&#x7528;<code>perl</code>&#x4EE3;&#x7801;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7C7B;&#x4F3C;&#x81EA;&#x52A8;&#x5206;&#x5272;&#x7279;&#x6027;&#x7684;&#x5E03;&#x5C40;&#xFF1B;&#x9996;&#x5148;&#x662F;<code>Graph::Easy</code>&#x8BED;&#x8A00;&#x7684;&#x8868;&#x8FBE;&#xFF1A;</p>
+<pre><code>[A|B|C] [1]-&gt;[ABC.2]
+</code></pre><p>perl&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-perl"><span class="hljs-keyword">use</span> Graph::Easy;
 
+<span class="hljs-keyword">my</span> <span class="hljs-variable">$g</span> = Graph::Easy-&gt;new();
+<span class="hljs-keyword">my</span> <span class="hljs-variable">$a</span> = <span class="hljs-variable">$g</span>-&gt;add_node(<span class="hljs-string">&apos;A&apos;</span>);
+<span class="hljs-keyword">my</span> <span class="hljs-variable">$b</span> = <span class="hljs-variable">$g</span>-&gt;add_node(<span class="hljs-string">&apos;B&apos;</span>); <span class="hljs-variable">$b</span>-&gt;relative_to(<span class="hljs-variable">$a</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>);
+<span class="hljs-keyword">my</span> <span class="hljs-variable">$c</span> = <span class="hljs-variable">$g</span>-&gt;add_node(<span class="hljs-string">&apos;C&apos;</span>); <span class="hljs-variable">$c</span>-&gt;relative_to(<span class="hljs-variable">$b</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>);
+<span class="hljs-keyword">my</span> <span class="hljs-variable">$o</span> = <span class="hljs-variable">$g</span>-&gt;add_node(<span class="hljs-string">&apos;1&apos;</span>); <span class="hljs-variable">$g</span>-&gt;add_edge(<span class="hljs-variable">$o</span>,<span class="hljs-variable">$c</span>);
+<span class="hljs-keyword">print</span> <span class="hljs-variable">$g</span>-&gt;as_ascii();
+</code></pre>
+<p>&#x4E24;&#x79CD;&#x8868;&#x8FBE;&#x7684;&#x8F93;&#x51FA;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>         +---+
+         | 1 |
+         +---+
+           |
+           |
+           v
++---+---+----+
+| A | B |  C |
++---+---+----+
+</code></pre>
                     
                     </section>
                 

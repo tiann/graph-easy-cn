@@ -53,7 +53,7 @@
         data-chapter-title="相对布局"
         data-filepath="hinting/relatives.md"
         data-basepath=".."
-        data-revision="Tue Jan 12 2016 10:39:32 GMT+0800 (CST)"
+        data-revision="Tue Jan 12 2016 11:58:15 GMT+0800 (CST)"
         data-innerlanguage="">
     
 
@@ -788,7 +788,57 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="&#x76F8;&#x5BF9;&#x5E03;&#x5C40;">&#x76F8;&#x5BF9;&#x5E03;&#x5C40;</h1>
+<p>&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x4F7F;&#x7528;&#x76F8;&#x5BF9;&#x5E03;&#x5C40;&#x7684;&#x65B9;&#x5F0F;&#x662F;&#x5BF9;&#x8282;&#x70B9;&#x4F7F;&#x7528;<code>origin</code>&#x548C;<code>offset</code>&#x5C5E;&#x6027;&#x6765;&#x6307;&#x5B9A;&#x76F8;&#x5BF9;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</p>
+<pre><code>[ Left ] -&gt; [ Right ] { origin: Left; offset: 2,1; }
+</code></pre><pre><code>+------+
+| Left |
++------+
+  |
+  |              +-------+
+  +------------&gt; | Right |
+                 +-------+
+</code></pre><p><code>offset</code>&#x5C5E;&#x6027;&#x4E0D;&#x5141;&#x8BB8;&#x6307;&#x5B9A;&#x4E3A;<code>0, 0</code>&#xFF1B;&#x53E6;&#x5916;&#xFF0C;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#x4E0D;&#x8981;&#x628A;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x653E;&#x5230;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x5185;&#x90E8;&#x53BB;&#x4E86;&#xFF0C;&#x5C24;&#x5176;&#x5F53;&#x8282;&#x70B9;&#x5360;&#x636E;&#x591A;&#x4E2A;&#x5355;&#x5143;&#x683C;&#x7684;&#x65F6;&#x5019;&#x3002;</p>
+<p>&#x8282;&#x70B9;&#x7684;&#x504F;&#x79FB;&#x662F;&#x4ECE;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x5DE6;/&#x53F3;&#x6216;&#x8005;&#x4E0A;/&#x4E0B;&#x6765;&#x8BA1;&#x7B97;&#x7684;&#xFF0C;&#x56E0;&#x6B64;&#x5BF9;&#x4E8E;&#x4E00;&#x4E2A;&#x5360;&#x636E;&#x4E09;&#x4E2A;&#x5355;&#x5143;&#x683C;&#x7684;&#x8282;&#x70B9;&#x6765;&#x8BF4;&#xFF0C;&#x8BBE;&#x7F6E;offset&#x4E3A;2&#x4F1A;&#x628A;&#x4E0B;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x653E;&#x7F6E;&#x5728;&#x5B83;&#x53F3;&#x8FB9;&#x504F;&#x79FB;&#x4E24;&#x4E2A;&#x4F4D;&#x7F6E;&#x7684;&#x5730;&#x65B9;&#xFF08;&#x800C;&#x4E0D;&#x662F;&#x653E;&#x5728;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#x5185;&#x90E8;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5355;&#x5143;&#x683C;&#x4E4B;&#x540E;&#xFF09;:</p>
+<pre><code>[ A ] { size: 3,2; }
 
+[ A ] -&gt; [ B ] { origin: A; offset: 2,0; }
+[ A ] -&gt; [ C ] { origin: A; offset: 1,1; }
+</code></pre><pre><code>+---+     +---+
+|   | --&gt; | B |
+| A |     +---+
+|   |
+|   |--+
++---+  v
+     +---+
+     | C |
+     +---+
+</code></pre><p>&#x53EF;&#x4EE5;&#x4E3A;&#x6BCF;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x8BBE;&#x7F6E;<code>origin</code>&#x5C5E;&#x6027;&#xFF1B;&#x552F;&#x4E00;&#x4E0D;&#x5141;&#x8BB8;&#x7684;&#x662F;&#x4E0D;&#x80FD;&#x521B;&#x5EFA;&#x5FAA;&#x73AF;&#x5F15;&#x7528;, &#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x662F;&#x9519;&#x8BEF;&#x7684;&#xFF1A;</p>
+<pre><code>[ A ] { origin: B; offset: 1,1; }
+[ B ] { origin: A; offset: 1,1; }       # invalid!
+
+[ C ] { origin: E; offset: 1,1; }
+[ D ] { origin: C; offset: 1,1; }
+[ E ] { origin: C; offset: 1,1; }       # invalid!
+</code></pre><p>&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x4F7F;&#x7528;&#x94FE;&#x5F0F;<code>offset</code> &#x7684;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code>[ A ] { origin: B; offset: 2,1; }
+
+-&gt; [ B ] { origin: C; offset: 1,1; }
+-&gt; [ C ] { origin: D; offset: 1,1; }
+-&gt; [ D ]
+-&gt; [ E ]
+</code></pre><pre><code>+---+     +---+
+| D | --&gt; | E |
++---+     +---+
+  ^  +---+
+  +--| C |
+     +---+
+       ^  +---+
+       +--| B |
+          +---+
+            ^       +---+
+            +------ | A |
+                    +---+
+</code></pre>
                     
                     </section>
                 
