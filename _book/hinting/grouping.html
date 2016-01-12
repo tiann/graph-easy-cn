@@ -53,7 +53,7 @@
         data-chapter-title="分组"
         data-filepath="hinting/grouping.md"
         data-basepath=".."
-        data-revision="Thu Jan 07 2016 20:20:23 GMT+0800 (CST)"
+        data-revision="Tue Jan 12 2016 10:39:32 GMT+0800 (CST)"
         data-innerlanguage="">
     
 
@@ -788,7 +788,45 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="&#x5206;&#x7EC4;">&#x5206;&#x7EC4;</h1>
+<p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x62EC;&#x53F7;&#x5C06;&#x8282;&#x70B9;&#x5206;&#x7EC4;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5B50;&#x56FE;&#xFF1B;&#x5206;&#x7EC4;&#x4F1A;&#x63D0;&#x793A;&#x5E03;&#x5C40;&#x5668;&#x5C3D;&#x91CF;&#x628A;&#x7EC4;&#x91CC;&#x9762;&#x7684;&#x8282;&#x70B9;&#x653E;&#x5728;&#x76F8;&#x8FD1;&#x7684;&#x5730;&#x65B9;&#x3002;</p>
+<pre><code>( German Cities
+  [ Berlin ] -&gt; [ Potsdam ]
+) {
+  border-style: dashed;
+  }
+</code></pre><pre><code>...................................
+: German Cities:                  :
+:                                 :
+: +-------------+     +---------+ :
+: |   Berlin    | --&gt; | Potsdam | :
+: +-------------+     +---------+ :
+:                                 :
+:.................................:
+</code></pre><p>&#x5206;&#x7EC4;&#x7684;&#x7279;&#x6027;&#x4E0E;<code>nodeclass</code>&#x7ED3;&#x5408;&#x8D77;&#x6765;&#x66F4;&#x52A0;&#x5F3A;&#x5927;&#xFF1A;</p>
+<pre><code>node.cities { color: blue; }
 
+( German Cities
+  [ Berlin ] -&gt; [ Potsdam ]
+) { 
+  border-style: dashed;
+  nodeclass: cities;
+  }
+</code></pre><p>&#x5728;&#x4E0A;&#x9762;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x91CC;&#x9762;&#xFF0C;&#x5206;&#x7EC4;&#x91CC;&#x9762;&#x7684;&#x8282;&#x70B9;&#x4F1A;&#x81EA;&#x52A8;&#x62E5;&#x6709;<code>node.cities</code>&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x3002;</p>
+<p>&#x7ED9;&#x4EE5;&#x7ED9;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x5206;&#x7EC4;&#x5230;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x8FB9;&#xFF0C;&#x53CD;&#x8FC7;&#x6765;&#x4E5F;&#x53EF;&#x884C;&#x3002;</p>
+<pre><code>[ From Node to Group ] --&gt;
+
+( German cities:
+  [ Berlin ] -&gt; [ Potsdam ]
+) 
+
+  -- group to group --&gt;
+
+( German rivers:
+  [ Rhein ] -&gt; [ Elbe ]
+)
+
+--&gt; [ From Group to Node ]
+</code></pre>
                     
                     </section>
                 

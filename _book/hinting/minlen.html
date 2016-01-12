@@ -53,7 +53,7 @@
         data-chapter-title="最小长度"
         data-filepath="hinting/minlen.md"
         data-basepath=".."
-        data-revision="Thu Jan 07 2016 20:20:23 GMT+0800 (CST)"
+        data-revision="Tue Jan 12 2016 10:39:32 GMT+0800 (CST)"
         data-innerlanguage="">
     
 
@@ -788,6 +788,16 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="&#x6700;&#x5C0F;&#x957F;&#x5EA6;">&#x6700;&#x5C0F;&#x957F;&#x5EA6;</h1>
+<p>&#x6709;&#x65F6;&#x5019;&#x5E0C;&#x671B;&#x6307;&#x5B9A;&#x4E24;&#x4E2A;&#x8282;&#x70B9;&#x4E4B;&#x95F4;&#x7684;&#x6700;&#x5C0F;&#x957F;&#x5EA6;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>minlen</code>&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x5B9E;&#x73B0;&#xFF0C;&#x5982;&#x679C;&#x5FC5;&#x8981;&#x7684;&#x8BDD;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>invisible</code>&#x5C5E;&#x6027;&#x8BA9;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#x9690;&#x85CF;&#x3002;</p>
+<pre><code>[ Aachen ] --&gt; [ Bonn ] --&gt; [ Coburg ]
+[ Aue ] --&gt; { minlen: 3; } [ Cuxhaven ]
+</code></pre><pre><code>+--------+     +------+     +----------+
+| Aachen | --&gt; | Bonn | --&gt; |  Coburg  |
++--------+     +------+     +----------+
++--------+                  +----------+
+|  Aue   | ---------------&gt; | Cuxhaven |
++--------+                  +----------+
+</code></pre><p>&#x4F7F;&#x7528;&#x6700;&#x5C0F;&#x957F;&#x5EA6;&#x7684;&#x597D;&#x5904;&#x662F;&#xFF0C;&#x5B83;&#x4F7F;&#x8FB9;&#x5EF6;&#x957F;&#x7684;&#x65F6;&#x5019;&#x548C;&#x8FB9;&#x7684;&#x65B9;&#x5411;&#x662F;&#x4E00;&#x81F4;&#x7684;&#xFF0C;&#x4E0D;&#x4F1A;&#x56E0;&#x4E3A;&#x6574;&#x4E2A;&#x56FE;&#x7684;&#x65B9;&#x5411;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x4E4B;&#x540E;&#x5C31;&#x4E71;&#x4E86;&#xFF1B;&#x6BD4;&#x5982;&#x5982;&#x679C;&#x4F60;&#x4F7F;&#x7528;<code>offset</code>&#x5C5E;&#x6027;&#x5B8C;&#x6210;&#x8FD9;&#x4E2A;&#x529F;&#x80FD;&#xFF0C;&#x7531;&#x4E8E;<code>offset</code>&#x4E24;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x4F4D;&#x7F6E;&#x662F;&#x56FA;&#x5B9A;&#x7684;&#xFF0C;&#x56E0;&#x6B64;&#x5982;&#x679C;&#x6574;&#x4E2A;&#x56FE;&#x7684;&#x65B9;&#x5411;&#x53D1;&#x751F;&#x53D8;&#x5316;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x8FB9;&#x7684;&#x5EF6;&#x957F;&#x5C31;&#x4E0D;&#x7B26;&#x5408;&#x9884;&#x671F;&#x4E86;&#x3002;</p>
 
                     
                     </section>

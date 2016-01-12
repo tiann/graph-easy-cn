@@ -53,7 +53,7 @@
         data-chapter-title="节点大小"
         data-filepath="hinting/node-size.md"
         data-basepath=".."
-        data-revision="Thu Jan 07 2016 20:20:23 GMT+0800 (CST)"
+        data-revision="Tue Jan 12 2016 10:39:32 GMT+0800 (CST)"
         data-innerlanguage="">
     
 
@@ -788,6 +788,40 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="&#x8282;&#x70B9;&#x5927;&#x5C0F;">&#x8282;&#x70B9;&#x5927;&#x5C0F;</h1>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>columns</code>, <code>rows</code>&#x4EE5;&#x53CA;<code>size</code>&#x5C5E;&#x6027;&#x5236;&#x5B9A;&#x8282;&#x70B9;&#x7684;&#x5927;&#x5C0F;&#xFF1A;</p>
+<pre><code>[ A ] { size: 2,2; }
+-&gt; [ B ] { rows: 2; }
+-&gt; [ C ] { columns: 3; }
+</code></pre><p>&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code>[ A ] { size: 2,2; }
+-&gt; [ B ] { rows: 2; }
+-&gt; [ C ] { columns: 3; }
+
+[ A ] -&gt; [ B ]
+ -&gt; [ C ]
+ -&gt; [ D ]
+
+[ D ] -&gt; [ C ]
+[ B ] -&gt; [ C ]
+
+[ A ] -&gt; [ F ]
+[ A ] -&gt; [ G ]
+</code></pre><pre><code>
+                      +---------+    +---------+
+                      |         v    v         |
++---+     +---+     +---+     +--------+     +---+
+| G | &lt;-- |   | --&gt; |   | --&gt; |   C    | --&gt; | D |
++---+     | A |     | B |     +--------+     +---+
+          |   |     |   |       ^
+          |   | --&gt; |   | ------+
+          +---+     +---+
+            |
+            |
+            v
+          +---+
+          | F |
+          +---+
+</code></pre><p>&#x5373;&#x4F7F;&#x4F60;&#x4E0D;&#x6307;&#x5B9A;&#x8282;&#x70B9;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x5E03;&#x5C40;&#x5668;&#x4F1A;&#x5728;&#x9700;&#x8981;&#x7684;&#x65F6;&#x5019;&#x81EA;&#x52A8;&#x589E;&#x52A0;&#x8282;&#x70B9;&#x7684;&#x5927;&#x5C0F;&#xFF1B;&#x6BD4;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x6709;&#x8D85;&#x8FC7;&#x56DB;&#x4E2A;&#x4EE5;&#x4E0A;&#x7684;&#x8FB9;&#x8F93;&#x51FA;&#x6216;&#x8005;&#x8F93;&#x5165;&#xFF1B;&#x53C8;&#x6216;&#x8005;&#x7ED9;&#x4E00;&#x4E2A;&#x65B9;&#x5411;&#x6307;&#x5B9A;&#x591A;&#x4E2A;&#x7AEF;&#x53E3;&#x7684;&#x8FB9;&#xFF1B;&#x6B63;&#x5982;&#x4F8B;&#x5B50;&#x91CC;&#x9762;&#x4E00;&#x6837;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x7ED9;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x5357;&#x65B9;&#x5236;&#x5B9A;&#x4E86;&#x4E94;&#x4E2A;&#x51FA;&#x53D1;&#x7684;&#x8FB9;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#x81F3;&#x5C11;&#x4F1A;&#x6709;&#x4E94;&#x4E2A;&#x5355;&#x5143;&#x683C;&#x8FD9;&#x4E48;&#x5BBD;&#x3002;</p>
 
                     
                     </section>

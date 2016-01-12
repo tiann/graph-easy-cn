@@ -53,7 +53,7 @@
         data-chapter-title="Joints"
         data-filepath="hinting/joints.md"
         data-basepath=".."
-        data-revision="Thu Jan 07 2016 20:20:23 GMT+0800 (CST)"
+        data-revision="Tue Jan 12 2016 10:39:32 GMT+0800 (CST)"
         data-innerlanguage="">
     
 
@@ -788,7 +788,37 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="joints">Joints</h1>
-
+<p>&#x5982;&#x679C;&#x6709;&#x4E24;&#x4E2A;&#x6216;&#x8005;&#x66F4;&#x591A;&#x7684;&#x8FB9;&#x5171;&#x4EAB;&#x4E86;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x8D77;&#x70B9;&#xFF08;&#x4E0D;&#x4EC5;&#x4EC5;&#x6307;&#x4E00;&#x4E2A;&#x65B9;&#x5411;&#xFF09;&#x5B83;&#x4EEC;&#x4F1A;&#x5728;&#x8DEF;&#x5F84;&#x7684;&#x67D0;&#x4E00;&#x5904;&#x5206;&#x53C9;&#xFF1B;&#x540C;&#x6837;&#xFF0C;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x6216;&#x8005;&#x591A;&#x4E2A;&#x8FB9;&#x5171;&#x4EAB;&#x4E86;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x7EC8;&#x70B9;&#xFF0C;&#x90A3;&#x4E48;&#x5B83;&#x4EEC;&#x4F1A;&#x5728;&#x67D0;&#x4E2A;&#x5730;&#x65B9;&#x6C47;&#x5408;&#x3002;</p>
+<pre><code>[ Potsdam ], [ Mannheim ]
+   --&gt; { end: back,0; }
+ [ Weimar ]
+   --&gt; { start: front,0; } [ Finsterwalde ], [ Aachen ]
+</code></pre><p><img src="http://bloodgate.com/perl/graph/manual/img/joints.png" alt=""></p>
+<pre><code>+----------+           +--------+          +--------------+
+| Mannheim | ------+-&gt; | Weimar | -+-----&gt; | Finsterwalde |
++----------+       |   +--------+  |       +--------------+
+                   |               |
+                   |               |
+                   |               |
++----------+       |               |       +--------------+
+| Potsdam  | ------+               +-----&gt; |    Aachen    |
++----------+                               +--------------+
+</code></pre><p>&#x8FD9;&#x4E2A;&#x673A;&#x5236;&#x53EF;&#x4EE5;&#x548C;&#x8FB9;&#x7684;&#x6807;&#x7B7E;&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#xFF1A;</p>
+<pre><code>[ Jena ] 
+ -- train --&gt; { start: front, 0; } 
+  [ Augsburg ], [ Ulm ]
+[ Jena ] -- car --&gt; { start: front, 0; } [ Plauen ]
+</code></pre><p><img src="http://bloodgate.com/perl/graph/manual/img/joint_labels.png" alt=""></p>
+<pre><code>+------+           train    +----------+
+| Jena | ------+----------&gt; |   Ulm    |
++------+       |            +----------+
+               |   train    +----------+
+               +----------&gt; | Augsburg |
+               |            +----------+
+               |    car     +----------+
+               +----------&gt; |  Plauen  |
+                            +----------+
+</code></pre>
                     
                     </section>
                 
